@@ -1,11 +1,11 @@
-package com.example.capstoneproject
+package com.example.capstoneproject.ui
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.example.capstoneproject.R
 import okhttp3.*
-import okhttp3.internal.http.HttpHeaders
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
@@ -27,10 +27,10 @@ class MainActivity : AppCompatActivity() {
             .addHeader("X-CMC_PRO_API_KEY", apiKey)
             .build()
 
-        client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {}
-            override fun onResponse(call: Call, response: Response) = println(response.body()?.string())
-        })
+//        client.newCall(request).enqueue(object : Callback {
+//            override fun onFailure(call: Call, e: IOException) {}
+//            override fun onResponse(call: Call, response: Response) = println(response.body()?.string())
+//        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
